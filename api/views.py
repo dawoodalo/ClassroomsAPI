@@ -13,20 +13,20 @@ class ClassroomDetails(RetrieveAPIView):
 	queryset = Classroom.objects.all()
 	serializer_class = ClassroomDetailsSerializer
 	lookup_field = 'id'
-	lookup_url_kwarg = 'Classroom_id'
+	lookup_url_kwarg = 'classroom_id'
 
 
 class UpdateClassroom(RetrieveUpdateAPIView):
 	queryset = Classroom.objects.all()
 	serializer_class = UpdateClassroomSerializer
 	lookup_field = 'id'
-	lookup_url_kwarg = 'Classroom_id'
+	lookup_url_kwarg = 'classroom_id'
 
 
 class CancelClassroom(DestroyAPIView):
 	queryset = Classroom.objects.all()
 	lookup_field = 'id'
-	lookup_url_kwarg = 'Classroom_id'
+	lookup_url_kwarg = 'classroom_id'
 
 
 class ClassroomCreate(CreateAPIView):
